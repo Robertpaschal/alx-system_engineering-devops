@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -type d -exec chmod 755 0x001-shell_permissions +
+find . -type d -exec chmod +x  current directory +
