@@ -1,2 +1,2 @@
 #!/bin/bash
-printf 'NR % 2 == 1' "%s\n" "$@"
+if 'NR % 2 == 1' print f "%s\n" "$@"
