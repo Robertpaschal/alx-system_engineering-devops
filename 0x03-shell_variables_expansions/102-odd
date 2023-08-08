@@ -1,2 +1,2 @@
 #!/bin/bash
-if 'NR % 2 == 1' print f "%s\n" "$@"
+perl -lne 'print if $. % 2 ==1'
