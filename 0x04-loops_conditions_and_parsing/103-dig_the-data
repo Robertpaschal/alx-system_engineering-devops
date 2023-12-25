@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-# displays the visitor IP along with the HTTP status code from the Apache log file.
-filename="apache-access.log"
+# displays the visitor IP along with the HTTP status code from the Apache log file
 
-awk -v FPAT='([^ ]*)|("[^"]*")' '{print $8,$1,$7}' $filename | sort -nur
+awk '{ print $1 " " $9}' apache-access.log | sort | uniq -c | sort -rn
