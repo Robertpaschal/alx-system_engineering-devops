@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Displays kistening ports. Includes listening socekets as well
+# Displays listening ports. Includes listening socekets as well
 # + as the PID and name of the program towhivh each socket belongs,
 
 netstart -1 --program
