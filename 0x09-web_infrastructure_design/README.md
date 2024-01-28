@@ -1,0 +1,1 @@
+In this project, I am learning how to structure a web project; how to use servers, application codebase and so on to adjust to the project being done according to the requiremnts of the web infrastructure
