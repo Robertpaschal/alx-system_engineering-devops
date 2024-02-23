@@ -1,4 +1,4 @@
-#Puppet manifest to creat a file in /tmp with specific permissions
+# Puppet manifest to creat a file in /tmp with specific permissions
 
 file { '/tmp/school':
   ensure  => file,
