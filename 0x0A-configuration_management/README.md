@@ -1,0 +1,1 @@
+In this directory, I am learning how to use puppet to make autmations to changes in a system.
