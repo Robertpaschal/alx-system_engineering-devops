@@ -1,0 +1,1 @@
+In this directory, I am learning how to use SSH in running servers, what it means and how it works.
