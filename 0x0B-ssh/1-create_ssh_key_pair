@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# This script creates an RSA key pair with a passphrase.
+
+if [ -f ~/.ssh/school ]; then
+    echo "Key pair 'school' already exists."
+    exit 1
+fi
+
+ssh-keygen -t rsa -b 4096 -f ~/.ssh/school -N "betty"
+
+if [ $? -eq 0 ]; then
+    echo "RSA key pair 'school' with passphrase 'betty' created successfully."
+else
+    echo "Failed to create RSA key pair."
+fi
