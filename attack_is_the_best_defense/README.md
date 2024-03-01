@@ -1,0 +1,1 @@
+In this optional project, I am learning how the internet works, how it transfers inofmation between clinet servers and trying to look into unsecured ones from unprotected sites.
