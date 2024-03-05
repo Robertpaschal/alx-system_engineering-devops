@@ -1,0 +1,1 @@
+In this directroy, I am learning how to configure different servers to specific nginx requirements and using it to access and write files hosted by a domain name.  
