@@ -52,8 +52,8 @@ sudo cp /etc/nginx/sites-enabled/default nginx-sites-enabled_default.backup
 
 server_config=\
 "server {
-		listen 80 default_server;
-		listen [::]:80 default_server;
+		listen 8080 default_server;
+		listen [::]:8080 default_server;
 		root /var/www/html;
 		index index.html index.htm index.nginx-debian.html
 		server_name_;
