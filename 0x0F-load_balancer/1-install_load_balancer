@@ -34,14 +34,14 @@ defaults
     timeout http-request 10s
 
 frontend robertpaschal.tech-frontend
-    bind *:8080
+    bind *:80
     mode http
     default_backend robertpaschal.tech-backend
 
 backend robertpaschal.tech-backend
     balance roundrobin
-    server 504812-web-01 54.162.232.115:8080 check
-    server 504812-web-02 100.25.212.31:8080 check
+    server 504812-web-01 54.162.232.115:80 check
+    server 504812-web-02 100.25.212.31:80 check
 "
 
 echo "$server_config" | sudo dd status=none of=/etc/haproxy/haproxy.cfg
