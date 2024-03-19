@@ -1,0 +1,25 @@
+#!/usr/bin/bash
+# installs the ufw firewall and some rules on web-01 ( and then web-02 and lb-01)
+
+if ! command -v ufw &> /dev/null; then
+    sudo apt update
+    sudo apt install -y ufw
+fi
+
+sudo ufw default deny incoming
+sudo ufw default allow outgoing
+
+sudo ufw allow 22/tcp
+sudo ufw allow 80/tcp
+sudo ufw allow 443/tcp
+
+sudo ufw enable
+
+#port forwarding rule
+sudo iptables -t nat -A PREROUTING -p tcp --dport 8080 -j REDIRECT --to-port 80
+
+sudo mkdir -p /etc/iptables/
+
+sudo sh -c  "iptables-save > /etc/iptables/rules.v4"
+
+sudo ufw reload
