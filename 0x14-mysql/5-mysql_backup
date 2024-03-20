@@ -11,7 +11,7 @@ archive_name="$(date +'%d-%m-%Y').tar.gz"
 mysql_password="$1"
 
 #generate MySQL dump
-mysqldump -u root -p"$mysql_password" --all-databases --add-drop-databse > "$dump_file"
+mysqldump -u root -p"$mysql_password" --all-databases > "$dump_file"
 
 if [ $? -ne 0 ]; then
     echo "MySQL dump failed"
@@ -19,6 +19,4 @@ if [ $? -ne 0 ]; then
 fi
 
 #compress the MySQL dump into a tar.gz archive
-tar -czf "$archive_name" "$dump_file"
-
-echo "Backup created: $archive_name"
+tar -czvf "$archive_name" "$dump_file"
