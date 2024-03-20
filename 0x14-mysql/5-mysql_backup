@@ -1,0 +1,24 @@
+#!/usr/bin/bash
+# generates a MySQL dump and creates a compressed archive out of it.
+
+if [ $# -ne 1 ]; then
+    echo "Usage: $0 <mysql_password>"
+    exit 1
+fi
+
+dump_file="backup.sql"
+archive_name="$(date +'%d-%m-%Y').tar.gz"
+mysql_password="$1"
+
+#generate MySQL dump
+mysqldump -u root -p"$mysql_password" --all-databases --add-drop-databse > "$dump_file"
+
+if [ $? -ne 0 ]; then
+    echo "MySQL dump failed"
+    exit 1
+fi
+
+#compress the MySQL dump into a tar.gz archive
+tar -czf "$archive_name" "$dump_file"
+
+echo "Backup created: $archive_name"
