@@ -19,4 +19,4 @@ if [ $? -ne 0 ]; then
 fi
 
 #compress the MySQL dump into a tar.gz archive
-tar -czvf "$archive_name" "$dump_file"
+tar -czf "$archive_name" "$dump_file"
