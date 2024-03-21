@@ -1,11 +1,6 @@
 #!/usr/bin/env bash
 # generates a MySQL dump and creates a compressed archive out of it.
 
-if [ $# -ne 1 ]; then
-    echo "Usage: $0 <mysql_password>"
-    exit 1
-fi
-
 dump_file="backup.sql"
 archive_name="$(date +'%d-%m-%Y').tar.gz"
 mysql_password="$1"
