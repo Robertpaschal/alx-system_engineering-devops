@@ -8,10 +8,5 @@ mysql_password="$1"
 #generate MySQL dump
 mysqldump -u root -p"$mysql_password" --all-databases > "$dump_file"
 
-if [ $? -ne 0 ]; then
-    echo "MySQL dump failed"
-    exit 1
-fi
-
 #compress the MySQL dump into a tar.gz archive
 tar -czvf "$archive_name" "$dump_file"
