@@ -1,0 +1,1 @@
+In this directory, I am learning how to Use API to querie endpoints, how to write functions on them and fully understand how APIs work.
