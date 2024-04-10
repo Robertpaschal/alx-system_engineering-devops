@@ -7,6 +7,7 @@ from sys import argv
 
 
 def number_of_subscribers(subreddit):
+    """Retunrs the number of subscribers from the subreddit"""
     url = f"https://www.reddit.com/r/{subreddit}/about.json"
     headers = {'User-Agent': 'Mozilla/5.0'}
 
