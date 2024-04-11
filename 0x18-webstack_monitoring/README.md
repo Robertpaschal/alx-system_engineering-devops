@@ -1,0 +1,1 @@
+In this directory, I am setting up my webstack monitoring logs so I can effectively make chnages and adjustments to it as need be depending on user traffick, downtimes and other factors.
