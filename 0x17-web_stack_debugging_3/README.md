@@ -1,0 +1,1 @@
+In this directory, Using strace, I find out why Apache is returning a 500 error. Once I found the issue, I fixed it and then automated it using Puppet (instead of using Bash as I was previously doing).
