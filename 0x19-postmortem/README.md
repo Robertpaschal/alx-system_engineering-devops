@@ -1,0 +1,1 @@
+In this directory, I am writing a postmortem on a project I once encontered an error while executing. It details the bugs I found and how painstaking it was to find the solution and what I eventually did to recover from the bug. It is overally a nice read.
