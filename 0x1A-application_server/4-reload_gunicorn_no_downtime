@@ -1,1 +1,13 @@
-Let's see
+#!/usr/bin/env bash
+# This Bash script gracefully restarts Gunicorn
+
+# Check if Gunicorn is running
+if pgrep -x "gunicorn" > /dev/null; then
+    # If Gunicorn is running, gracefully reload it
+    sudo systemctl reload gunicorn.service
+    echo "Gunicorn reloaded gracefully."
+else
+    # If Gunicorn is not running, start it
+    sudo systemctl start gunicorn.service
+    echo "Gunicorn started."
+fi
